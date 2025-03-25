@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 import ProductSearch from '../products/ProductSearch';
+import logo from '../../assets/images/logo/moonchild-logo.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,6 +27,11 @@ const Header = () => {
           {/* Logo */}
           <div className="text-2xl font-bold">
             <Link to="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt=" " 
+                className="h-10 mr-2" 
+              />
               <span className="text-lg md:text-2xl">MOONCHILD</span>
             </Link>
           </div>
